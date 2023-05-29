@@ -7,14 +7,15 @@ SPECIAL_LOCATIONS = {
 IGNORE_FILES = [
     'symlink.py',
     '.git',
-    '.gitignore'
+    '.gitignore',
+    '.davmailbackup'
 ]
 
 dir = '/home/zan/dotfiles/'
 old_dir = '/home/zan/old-dotfiles/'
 
 files = os.listdir(dir)
-files = {name: f'/home/zan/.{name}' for name in files}
+files = {name: f'/home/zan/{name}' for name in files}
 
 for name in IGNORE_FILES:
     del files[name]
