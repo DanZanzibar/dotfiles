@@ -20,6 +20,7 @@ oauth2_client_id_eval = get_client_id()
 oauth2_client_secret_eval = get_client_secret()
 oauth2_refresh_token_eval = get_refresh_token()
 oauth2_request_url = https://login.microsoftonline.com/4a8c66e5-120a-4192-a8b9-83c66d812331/oauth2/v2.0/token
+folderfilter = lambda folder: folder in ['INBOX', 'Archive', 'Sent Items', 'Templates', 'Trash']
 
 [Account personal]
 localrepository = Local-personal
@@ -36,3 +37,4 @@ remoteusereval = get_username('personal')
 remotepasseval = get_password('personal')
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 auth_mechanisms = PLAIN
+folderfilter = lambda folder: folder in ['INBOX', 'Archives', '[Gmail]/Sent Mail', '[Gmail]/Trash', 'Templates']
