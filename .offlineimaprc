@@ -1,5 +1,5 @@
 [general]
-accounts = work, personal
+accounts = work, personal, ctc, lndc
 pythonfile = ~/.offlineimap/.helper.py
 
 [Account work]
@@ -35,6 +35,40 @@ type = IMAP
 remotehost = imap.gmail.com
 remoteusereval = get_username('personal')
 remotepasseval = get_password('personal')
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+auth_mechanisms = PLAIN
+folderfilter = lambda folder: folder in ['INBOX', 'Archives', '[Gmail]/Sent Mail', '[Gmail]/Trash', 'Templates']
+
+[Account ctc]
+localrepository = Local-ctc
+remoterepository = Remote-ctc
+
+[Repository Local-ctc]
+type = Maildir
+localfolders = ~/.mail/ctc
+
+[Repository Remote-ctc]
+type = IMAP
+remotehost = imap.gmail.com
+remoteusereval = get_username('ctc')
+remotepasseval = get_password('ctc')
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+auth_mechanisms = PLAIN
+folderfilter = lambda folder: folder in ['INBOX', 'Archives', '[Gmail]/Sent Mail', '[Gmail]/Trash', 'Templates']
+
+[Account lndc]
+localrepository = Local-lndc
+remoterepository = Remote-lndc
+
+[Repository Local-lndc]
+type = Maildir
+localfolders = ~/.mail/lndc
+
+[Repository Remote-lndc]
+type = IMAP
+remotehost = imap.gmail.com
+remoteusereval = get_username('lndc')
+remotepasseval = get_password('lndc')
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 auth_mechanisms = PLAIN
 folderfilter = lambda folder: folder in ['INBOX', 'Archives', '[Gmail]/Sent Mail', '[Gmail]/Trash', 'Templates']
