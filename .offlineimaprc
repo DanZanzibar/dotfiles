@@ -1,6 +1,6 @@
 [general]
 accounts = work, personal, ctc, lndc
-pythonfile = ~/.offlineimap/.helper.py
+pythonfile = ~/scripts/offlineimap-helper.py
 
 [Account work]
 localrepository = Local-work
