@@ -8,7 +8,7 @@ remoterepository = Remote-work
 
 [Repository Local-work]
 type = Maildir
-localfolders = ~/.mail/work/
+localfolders = ~/mail/work/
 
 [Repository Remote-work]
 type = IMAP
@@ -28,7 +28,7 @@ remoterepository = Remote-personal
 
 [Repository Local-personal]
 type = Maildir
-localfolders = ~/.mail/personal
+localfolders = ~/mail/personal
 
 [Repository Remote-personal]
 type = IMAP
@@ -45,7 +45,7 @@ remoterepository = Remote-ctc
 
 [Repository Local-ctc]
 type = Maildir
-localfolders = ~/.mail/ctc
+localfolders = ~/mail/ctc
 
 [Repository Remote-ctc]
 type = IMAP
@@ -62,7 +62,7 @@ remoterepository = Remote-lndc
 
 [Repository Local-lndc]
 type = Maildir
-localfolders = ~/.mail/lndc
+localfolders = ~/mail/lndc
 
 [Repository Remote-lndc]
 type = IMAP
