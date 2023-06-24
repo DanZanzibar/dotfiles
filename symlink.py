@@ -1,15 +1,31 @@
 import shutil
 import os
+import sys
+import tomllib
 
 
-SPECIAL_LOCATIONS = {
-}
-IGNORE_FILES = [
-    'symlink.py',
-    '.git',
-    '.gitignore',
-    '.davmailbackup'
-]
+CONFIG_PATH = os.path.expanduser(sys.argv[1])
+CONFIG_DIR = [x for x in CONFIG_PATH.split('/') if x != ''][-1]
+
+with open(CONFIG_PATH, 'rb') as file:
+    TOML_DATA = tomllib.load(file)
+
+if len(sys.argv) == 3:
+    SYMLINK_DIR = sys.argv[2]
+else:
+    SYMLINK_DIR = TOML_DATA['symlink-dir']
+
+SPECIAL_LOCATIONS = {}
+
+IGNORE_FILES = ['.git', '.gitignore']
+
+
+# with open
+# Needed in the config file:
+# File to put symlinks
+# Special ignore files
+# Special location symlinks
+# Where to backup existing files
 
 dir = '/home/zan/dotfiles/'
 old_dir = '/home/zan/old-dotfiles/'

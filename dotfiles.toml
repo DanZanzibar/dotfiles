@@ -1,0 +1,4 @@
+[Basic]
+symlink-dir = "/home/zan/"
+ignore-files = [".davmailbackup"]
+# special-symlink-locations = []
