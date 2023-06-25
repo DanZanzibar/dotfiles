@@ -1,39 +1,46 @@
 import shutil
 import os
 import sys
+import argparse
 import tomllib
 
 
-CONFIG_PATH = os.path.expanduser(sys.argv[1])
-CONFIG_DIR = [x for x in CONFIG_PATH.split('/') if x != ''][-1]
-
-with open(CONFIG_PATH, 'rb') as file:
-    TOML_DATA = tomllib.load(file)
-
-if len(sys.argv) == 3:
-    SYMLINK_DIR = sys.argv[2]
+if len(sys.argv) > 1:
+    file_dir = os.path.expanduser(sys.argv[1])
 else:
-    SYMLINK_DIR = TOML_DATA['symlink-dir']
+    file_dir = os.getcwd()
 
-SPECIAL_LOCATIONS = {}
+with open(file_dir, 'rb') as file:
+    toml_data = tomllib.load(file)
 
-IGNORE_FILES = ['.git', '.gitignore']
+toml_general = toml_data['general']
 
+parser = argparse.ArgumentParser(
+    description='Symlink files in a directory to another directory.')
+parser.add_argument('file_dir', default=os.getcwd())
+parser.add_argument('symlink_dir', default=toml_general['symlink_dir'])
 
-# with open
-# Needed in the config file:
-# File to put symlinks
-# Special ignore files
-# Special location symlinks
-# Where to backup existing files
+files_dir_path = os.path.expanduser(sys.argv[1])
+files_dir = [x for x in files_dir_path.split('/') if x != ''][-1]
 
-dir = '/home/zan/dotfiles/'
-old_dir = '/home/zan/old-dotfiles/'
+backup_dir = toml_general.get('backup-dir', files_dir_path)
+
+ignore_files = ['.git', '.gitignore']
+if 'ignore-files' in toml_general:
+    ignore_files += toml_general['ignore-files']
+
+special_locations = {}
+if 'special-locations' in toml_data:
+    toml_special = toml_data['special-locations']
+    special_locations = {file: os.path.expanduser(address)
+                      for file, address in toml_special.items()}
+
+# Need to get SYMLINKS_DIR from argparse or TOML.
 
 files = os.listdir(dir)
 files = {name: f'/home/zan/{name}' for name in files}
 
-for name in IGNORE_FILES:
+for name in ignore_files:
     del files[name]
 
 files.update(SPECIAL_LOCATIONS)
