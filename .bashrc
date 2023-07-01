@@ -133,6 +133,7 @@ alias symlink='python3.11 ~/scripts/symlink.py'
 alias quickcommit='git commit -a -m "quickcommit"'
 alias gtd='emacs ~/orghome/gtd.org'
 alias new-venv='bash ~/scripts/create_venv.sh'
+alias league='activate-venv lndc && python3 -m lndc'
 
 # Aliases for ssh'ing into computers
 alias desktop='ssh zan@zan-desktop.freeddns.org'
