@@ -124,7 +124,7 @@ activate-venv () {
 
 export VENVS=''
 for f in $(ls ~/.venvs/)
-do export VENVS+=" $f"
+do export VENVS+="$f "
 done
 
 complete -W "$VENVS" activate-venv
@@ -142,9 +142,6 @@ alias quickcommit='git commit -a -m "quickcommit"'
 alias gtd='emacs ~/orghome/gtd.org'
 alias new-venv='bash ~/scripts/create_venv.sh'
 alias league='activate-venv lndc && python3 -m lndc'
-alias ls-venvs='ls ~/.venvs/'
-
-# Completions
 
 # Aliases for ssh'ing into computers
 alias desktop='ssh zan@zan-desktop.freeddns.org'
