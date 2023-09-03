@@ -122,13 +122,15 @@ activate-venv () {
     source ~/.venvs/$1/bin/activate
 }
 
-export VENVS=''
-for f in $(ls ~/.venvs/)
-do export VENVS+="$f "
-done
+update-venvs () {
+    export VENVS=''
+    for f in $(ls ~/.venvs/)
+    do export VENVS+="$f "
+    done
+}
 
+update-venvs
 complete -W "$VENVS" activate-venv
-
 
 
 # Zan's defined aliases
@@ -141,7 +143,7 @@ alias symlink='python3.11 ~/scripts/symlink.py'
 alias quickcommit='git commit -a -m "quickcommit"'
 alias gtd='emacs ~/orghome/gtd.org'
 alias new-venv='bash ~/scripts/create_venv.sh'
-alias league='activate-venv lndc && python3 -m lndc'
+alias league='activate-venv league && python3 -m league'
 
 # Aliases for ssh'ing into computers
 alias desktop='ssh zan@zan-desktop.freeddns.org'
