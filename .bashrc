@@ -119,12 +119,12 @@ fi
 
 # Zan's defined functions
 activate-venv () {
-    source ~/.venvs/$1/bin/activate
+    source ~/sync-general/.venvs/$1/bin/activate
 }
 
 update-venvs () {
     export VENVS=''
-    for f in $(ls ~/.venvs/)
+    for f in $(ls ~/sync-general/.venvs/)
     do export VENVS+="$f "
     done
 }
@@ -135,14 +135,13 @@ complete -W "$VENVS" activate-venv
 
 # Zan's defined aliases
 alias cpwd="pwd | xclip -r -selection clipboard && echo 'pwd copied to clipboard'"
-alias pyproject="bash ~/scripts/new_python_package.sh"
+alias pyproject="bash ~/sync-general/scripts/new_python_package.sh"
 alias gits='git status'
 alias ghprivate='gh repo create -s . --private --push'
 alias ghpublic='gh repo create -s . --public --push'
-alias symlink='python3.11 ~/scripts/symlink.py'
+alias symlink='python3.11 ~/sync-general/scripts/symlink.py'
 alias quickcommit='git commit -a -m "quickcommit"'
-alias gtd='emacs ~/orghome/gtd.org'
-alias new-venv='bash ~/scripts/create_venv.sh'
+alias new-venv='bash ~/sync-general/scripts/create_venv.sh'
 alias league='activate-venv league && python3 -m league'
 
 # Aliases for ssh'ing into computers
@@ -153,7 +152,7 @@ alias eframe='TERM=xterm-direct emacsclient -nw'
 export PATH="~/.local/bin:$PATH"
 
 #Zan's venv directory variable
-export WORKON_HOME=~/.venvs/
+export WORKON_HOME=~/sync-general/.venvs/
 
 # Setting XDG environment variable
 export XDG_CONFIG_HOME=~/.config/
