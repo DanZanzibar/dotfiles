@@ -127,10 +127,10 @@ update-venvs () {
     for f in $(ls ~/sync-general/.venvs/)
     do export VENVS+="$f "
     done
+    complete -W "$VENVS" activate-venv
 }
 
 update-venvs
-complete -W "$VENVS" activate-venv
 
 
 # Zan's defined aliases
