@@ -143,6 +143,7 @@ alias symlink='python3.11 ~/sync-general/scripts/symlink.py'
 alias quickcommit='git commit -a -m "quickcommit"'
 alias new-venv='bash ~/sync-general/scripts/create_venv.sh'
 alias league='activate-venv league-prod && python3 -m league'
+alias work-contacts='python3 ~/sync-general/scripts/contacts.py && libreoffice --calc ~/sync-general/bin/contacts/accounts.csv'
 
 # Aliases for ssh'ing into computers
 alias desktop='ssh zan@zan-desktop.freeddns.org'
