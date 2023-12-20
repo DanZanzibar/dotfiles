@@ -157,3 +157,6 @@ export WORKON_HOME=~/sync-general/.venvs/
 
 # Setting XDG environment variable
 export XDG_CONFIG_HOME=~/.config/
+
+# Setting JAVA_HOME variable
+export JAVA_HOME=/usr/lib/jvm/default-java
