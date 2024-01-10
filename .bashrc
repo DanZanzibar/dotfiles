@@ -145,6 +145,7 @@ alias new-venv='bash ~/sync-general/scripts/create_venv.sh'
 alias league='activate-venv league-prod && python3 -m league'
 alias work-contacts='activate-venv customer_contacts && python3 -m customer_contacts'
 alias snippet='activate-venv pyclipboard && python3 -m pyclipboard'
+alias astudio='cd ~/android-studio/bin && ./studio.sh'
 
 # Aliases for ssh'ing into computers
 alias desktop='ssh zan@zan-desktop.freeddns.org'
