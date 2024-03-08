@@ -147,6 +147,10 @@ alias work-contacts='activate-venv customer_contacts && python3 -m customer_cont
 alias snippet='activate-venv pyclipboard && python3 -m pyclipboard'
 alias astudio='cd ~/android-studio/bin && ./studio.sh'
 
+# Aliases for work docs
+alias conax-fittings='evince ~/sync-general/work-docs/conax-docs/fittings.pdf & evince ~/sync-general/work-docs/conax-docs/pricelist-fittings-2021-09-01.pdf & exit'
+alias conax-temp-sensors='evince ~/sync-general/work-docs/conax-docs/temp-sensors.pdf & evince ~/sync-general/work-docs/conax-docs/pricelist-temp-sensors-2021-09-01.pdf & exit'
+
 # Aliases for ssh'ing into computers
 alias desktop='ssh zan@zan-desktop.freeddns.org'
 alias eframe='TERM=xterm-direct emacsclient -nw'
