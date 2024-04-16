@@ -148,8 +148,10 @@ alias snippet='activate-venv pyclipboard && python3 -m pyclipboard'
 alias astudio='cd ~/android-studio/bin && ./studio.sh & exit'
 
 # Aliases for work docs
-alias conax-fittings='evince ~/sync-general/work-docs/conax-docs/fittings.pdf & evince ~/sync-general/work-docs/conax-docs/pricelist-fittings-2021-09-01.pdf & exit'
-alias conax-temp-sensors='evince ~/sync-general/work-docs/conax-docs/temp-sensors.pdf & evince ~/sync-general/work-docs/conax-docs/pricelist-temp-sensors-2021-09-01.pdf & exit'
+alias pricelists-conax-fittings='evince ~/sync-general/work-docs/conax-docs/fittings.pdf & evince ~/sync-general/bin/price-lists/conax-fittings-2024-01-01.pdf & exit'
+alias pricelists-conax-temp-sensors='evince ~/sync-general/work-docs/conax-docs/temp-sensors.pdf & evince ~/sync-general/bin/price-lists/conax-temp-sensor-2024-01-01.pdf & exit'
+alias pricelists-itech='libreoffice --calc ~/sync-general/bin/price-lists/itech-2024-01-13.xlsx & exit'
+alias pricelists-magtrol='libreoffice --calc ~/sync-general/bin/price-lists/magtrol-2024-02-20.xlsx & exit'
 
 # Aliases for ssh'ing into computers
 alias desktop='ssh zan@zan-desktop.freeddns.org'
