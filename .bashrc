@@ -139,7 +139,7 @@ alias pyproject="bash ~/sync-general/scripts/new_python_package.sh"
 alias gits='git status'
 alias ghprivate='gh repo create -s . --private --push'
 alias ghpublic='gh repo create -s . --public --push'
-alias symlink='python3.11 ~/sync-general/scripts/symlink.py'
+alias symlink='python3 ~/sync-general/scripts/symlink.py'
 alias quickcommit='git commit -a -m "quickcommit"'
 alias new-venv='bash ~/sync-general/scripts/create_venv.sh'
 alias league-1='activate-venv league-1 && python3 -m league'
@@ -153,6 +153,7 @@ alias pricelists-conax-fittings='evince ~/sync-general/work-docs/conax-docs/fitt
 alias pricelists-conax-temp-sensors='evince ~/sync-general/work-docs/conax-docs/temp-sensors.pdf & evince ~/sync-general/bin/price-lists/conax-temp-sensor-2024-01-01.pdf & exit'
 alias pricelists-itech='libreoffice --calc ~/sync-general/bin/price-lists/itech-2024-01-13.xlsx & google-chrome --new-window https://www.itechate.com/en/ & exit'
 alias pricelists-magtrol='libreoffice --calc ~/sync-general/bin/price-lists/magtrol-2024-02-20.xlsx & exit'
+alias pricelists-siglent='libreoffice --calc ~/sync-general/bin/price-lists/siglent-2024-07-01.xls & exit'
 
 # Aliases for ssh'ing into computers
 alias desktop='ssh zan@zan-desktop.freeddns.org'
