@@ -151,7 +151,7 @@ alias astudio='cd ~/android-studio/bin && ./studio.sh & exit'
 # Aliases for work docs
 alias pricelists-conax-fittings='evince ~/sync-general/work-docs/conax-docs/fittings.pdf & evince ~/sync-general/bin/price-lists/conax-fittings-2024-01-01.pdf & exit'
 alias pricelists-conax-temp-sensors='evince ~/sync-general/work-docs/conax-docs/temp-sensors.pdf & evince ~/sync-general/bin/price-lists/conax-temp-sensor-2024-01-01.pdf & exit'
-alias pricelists-itech='libreoffice --calc ~/sync-general/bin/price-lists/itech-2024-01-13.xlsx & google-chrome --new-window https://www.itechate.com/en/ & exit'
+alias pricelists-itech='libreoffice --calc ~/sync-general/bin/price-lists/itech-2024-06-21.xlsx & google-chrome --new-window https://www.itechate.com/en/ & exit'
 alias pricelists-magtrol='libreoffice --calc ~/sync-general/bin/price-lists/magtrol-2024-02-20.xlsx & exit'
 alias pricelists-siglent='libreoffice --calc ~/sync-general/bin/price-lists/siglent-2024-07-01.xls & exit'
 
