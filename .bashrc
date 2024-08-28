@@ -154,6 +154,7 @@ alias goto-comp2131='cd ~/sync-general/school/comp2131/'
 # COMP2131 aliases
 alias school-comp2131-modules-breakdown='evince ~/sync-general/school/comp2131/modules-breakdown.pdf'
 alias school-comp2131-computer-systems='evince ~/sync-general/texts/computer-systems-a-programmers-perspective.pdf'
+alias school-comp2131-c-programming='evince ~/sync-general/texts/the-c-programming-language.pdf'
 
 # Aliases for work docs
 alias pricelists-conax-fittings='evince ~/sync-general/work-docs/conax-docs/fittings.pdf & evince ~/sync-general/bin/price-lists/conax-fittings-2024-01-01.pdf & exit'
