@@ -152,11 +152,6 @@ alias astudio='cd ~/android-studio/bin && ./studio.sh & exit'
 # Directory aliases
 alias goto-comp2131='cd ~/sync-general/school/comp2131/'
 
-# School aliases
-alias school-comp2131-computer-systems-text='evince ~/sync-general/texts/computer-systems-a-programmers-perspective.pdf & exit'
-alias school-comp2131-c-programming-text='evince ~/sync-general/texts/the-c-programming-language.pdf & exit'
-alias school-comp2131-module-breakdown='evince ~/sync-general/school/comp2131/modules-breakdown.pdf & exit'
-
 # Aliases for work docs
 alias pricelists-conax-fittings='evince ~/sync-general/work-docs/conax-docs/fittings.pdf & evince ~/sync-general/bin/price-lists/conax-fittings-2024-01-01.pdf & exit'
 alias pricelists-conax-temp-sensors='evince ~/sync-general/work-docs/conax-docs/temp-sensors.pdf & evince ~/sync-general/bin/price-lists/conax-temp-sensor-2024-01-01.pdf & exit'
@@ -166,6 +161,8 @@ alias pricelists-siglent='libreoffice --calc ~/sync-general/bin/price-lists/sigl
 
 # Aliases for ssh'ing into computers
 alias desktop='ssh zan@zan-desktop.freeddns.org'
+alias legion='ssh zan@legion'
+alias x1-carbon='ssh zan@x1'
 alias eframe='TERM=xterm-direct emacsclient -nw'
 
 # Zan's Path amendments
