@@ -148,7 +148,8 @@ alias league-testing='activate-venv league && python3 -m league ~/sync-general/b
 alias work-contacts='activate-venv customer_contacts && python3 -m customer_contacts'
 alias snippet='activate-venv pyclipboard && python3 -m pyclipboard'
 alias astudio='cd ~/android-studio/bin && ./studio.sh & exit'
-alias compile-new-keymap='qmk compile -e CONVERT_TO=rp2040_ce && cp ~/qmk/lily58_rev1_DanZanzibar_rp2040_ce.uf2 /media/zan/RPI-RP2/'
+alias keymap-update='qmk compile -e CONVERT_TO=rp2040_ce && while [ ! -d /media/zan/RPI-RP2 ]; do sleep 1; done && cp ~/qmk/lily58_rev1_DanZanzibar_rp2040_ce.uf2 /media/zan/RPI-RP2/'
+
 
 # Directory aliases
 alias goto-comp2131='cd ~/sync-general/school/comp2131/'
