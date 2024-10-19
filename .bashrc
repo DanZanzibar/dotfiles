@@ -122,15 +122,26 @@ activate-venv () {
     source ~/sync-general/.venvs/$1/bin/activate
 }
 
-update-venvs () {
-    export VENVS=''
-    for f in $(ls ~/sync-general/.venvs/)
-    do export VENVS+="$f "
+_activate-venv-completions () {
+    local curr_word="${COMP_WORDS[COMP_CWORD]}"
+    local venvs=''
+    for file in ~/sync-general/.venvs/*; do
+	venvs+="${file##*/} "
     done
-    complete -W "$VENVS" activate-venv
+    COMPREPLY=($(compgen -W "$venvs" -- "$curr_word"))
 }
 
-update-venvs
+complete -F _activate-venv-completions activate-venv
+
+# update-venvs () {
+#     export VENVS=''
+#     for f in $(ls ~/sync-general/.venvs/)
+#     do export VENVS+="$f "
+#     done
+#     complete -W "$VENVS" activate-venv
+# }
+
+# update-venvs
 
 
 # Zan's defined aliases
