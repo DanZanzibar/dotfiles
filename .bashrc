@@ -133,16 +133,6 @@ _activate-venv-completions () {
 
 complete -F _activate-venv-completions activate-venv
 
-# update-venvs () {
-#     export VENVS=''
-#     for f in $(ls ~/sync-general/.venvs/)
-#     do export VENVS+="$f "
-#     done
-#     complete -W "$VENVS" activate-venv
-# }
-
-# update-venvs
-
 
 # Zan's defined aliases
 alias cpwd="pwd | xclip -r -selection clipboard && echo 'pwd copied to clipboard'"
