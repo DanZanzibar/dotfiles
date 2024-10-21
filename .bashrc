@@ -43,7 +43,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -117,65 +117,32 @@ if ! shopt -oq posix; then
 fi
 
 
+# Define which computers are running which OS.
+ARCH_COMPS="x1-carbon"
+UBUNTU_COMPS="desktop-ubuntu legion"
+
+if [[ "$ARCH_COMPS" = *"$HOSTNAME"* ]]; then
+    export HERBST_LAYOUT_DIR="$HOME/.config/herbstluftwm/layouts"
+fi
+
+# Set editor.
+export EDITOR=emacs
+
+# Load Zan's bash library
+# for file in $(find ~/sync-general/lib/bash/ -type f); do
+#     source $file
+# done
+
 # Zan's defined functions
-activate-venv () {
-    source ~/sync-general/.venvs/$1/bin/activate
-}
-
-_activate-venv-completions () {
-    local curr_word="${COMP_WORDS[COMP_CWORD]}"
-    local venvs=''
-    for file in ~/sync-general/.venvs/*; do
-	venvs+="${file##*/} "
-    done
-    COMPREPLY=($(compgen -W "$venvs" -- "$curr_word"))
-}
-
-complete -F _activate-venv-completions activate-venv
 
 
-# Zan's defined aliases
-alias cpwd="pwd | xclip -r -selection clipboard && echo 'pwd copied to clipboard'"
-alias pyproject="bash ~/sync-general/scripts/new_python_package.sh"
-alias gits='git status'
-alias ghprivate='gh repo create -s . --private --push'
-alias ghpublic='gh repo create -s . --public --push'
-alias symlink='python3 ~/sync-general/scripts/symlink.py'
-alias quickcommit='git commit -a -m "quickcommit"'
-alias new-venv='bash ~/sync-general/scripts/create_venv.sh'
-alias league-1='activate-venv league && python3 -m league ~/sync-general/bin/league-data/league-1/config.toml'
-alias league-2='activate-venv league && python3 -m league ~/sync-general/bin/league-data/league-2/config.toml'
-alias league-testing='activate-venv league && python3 -m league ~/sync-general/bin/league-data/league-testing/config.toml'
-alias work-contacts='activate-venv customer_contacts && python3 -m customer_contacts'
-alias snippet='activate-venv pyclipboard && python3 -m pyclipboard'
-alias astudio='cd ~/android-studio/bin && ./studio.sh & exit'
-alias keymap-update='qmk compile -e CONVERT_TO=rp2040_ce && while [ ! -d /media/zan/RPI-RP2 ]; do sleep 1; done && cp ~/qmk/lily58_rev1_DanZanzibar_rp2040_ce.uf2 /media/zan/RPI-RP2/'
-
-
-# Directory aliases
-alias goto-comp2131='cd ~/sync-general/school/comp2131/'
-
-# Aliases for work docs
-alias pricelists-conax-fittings='evince ~/sync-general/work-docs/conax-docs/fittings.pdf & evince ~/sync-general/bin/price-lists/conax-fittings-2024-01-01.pdf & exit'
-alias pricelists-conax-temp-sensors='evince ~/sync-general/work-docs/conax-docs/temp-sensors.pdf & evince ~/sync-general/bin/price-lists/conax-temp-sensor-2024-01-01.pdf & exit'
-alias pricelists-itech='libreoffice --calc ~/sync-general/bin/price-lists/itech-2024-06-21.xlsx & google-chrome --new-window https://www.itechate.com/en/ & exit'
-alias pricelists-magtrol='libreoffice --calc ~/sync-general/bin/price-lists/magtrol-2024-02-20.xlsx & exit'
-alias pricelists-siglent='libreoffice --calc ~/sync-general/bin/price-lists/siglent-2024-08-15.xls & exit'
-
-# Aliases for ssh'ing into computers
-alias desktop='ssh zan@zan-desktop.freeddns.org'
-alias legion='ssh zan@legion'
-alias x1-carbon='ssh zan@x1'
-alias eframe='TERM=xterm-direct emacsclient -nw'
 
 # Zan's Path amendments
-export PATH="~/.local/bin:$PATH"
+export PATH="~/sync-general/bin/bash/:$PATH"
+export PATH="~/.config/herbstluftwm/scripts/:$PATH"
 
 #Zan's venv directory variable
 export WORKON_HOME=~/sync-general/.venvs/
 
 # Setting XDG environment variable
 export XDG_CONFIG_HOME=~/.config/
-
-# Setting JAVA_HOME variable - Not using this as it interfers with Intellij.
-# export JAVA_HOME=/usr/lib/jvm/default-java
