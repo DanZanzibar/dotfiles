@@ -1,5 +1,0 @@
-[general]
-symlink-dir = "~"
-ignore-files = [".davmailbackup"]
-
-[special-locations]

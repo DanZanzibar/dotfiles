@@ -121,6 +121,8 @@ fi
 ARCH_COMPS="x1-carbon"
 UBUNTU_COMPS="desktop-ubuntu legion"
 
+source ~/sync-general/lib/bash/aliases 
+
 if [[ "$ARCH_COMPS" = *"$HOSTNAME"* ]]; then
     export HERBST_LAYOUT_DIR="$HOME/.config/herbstluftwm/layouts"
 fi
