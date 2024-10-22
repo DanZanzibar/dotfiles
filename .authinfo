@@ -1,3 +1,4 @@
+machine x1-carbon login zan port ssh password Leslienorrie1!
 machine zan-desktop.freeddns.org login zan port ssh password Leslienorrie1!
 machine 10.0.0.116 login zan port ssh password Leslienorrie1!
 machine personal port 993 login zanowsley@gmail.com password bxlmmeypjumorvve
