@@ -103,14 +103,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export HERBST_LAYOUT_DIR="$HOME/.config/herbstluftwm/layouts"
+export HERBST_LAYOUT_DIR="$HOME/dotfiles/$HOSTNAME/layouts"
 
 # Set editor.
 export EDITOR=emacs
 
 # Zan's Path amendments
-export PATH="~/zan-bin/:$PATH"
-export PATH="~/.config/herbstluftwm/scripts/:$PATH"
+export PATH="~/scripts/:$PATH"
 
 #Zan's venv directory variable
 export WORKON_HOME=~/sync-general/.venvs/
