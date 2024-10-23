@@ -116,16 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-# Define which computers are running which OS.
-ARCH_COMPS="x1-carbon"
-UBUNTU_COMPS="desktop-ubuntu legion"
-
-source ~/sync-general/lib/bash/aliases 
-
-if [[ "$ARCH_COMPS" = *"$HOSTNAME"* ]]; then
-    export HERBST_LAYOUT_DIR="$HOME/.config/herbstluftwm/layouts"
-fi
+export HERBST_LAYOUT_DIR="$HOME/.config/herbstluftwm/layouts"
 
 # Set editor.
 export EDITOR=emacs
@@ -148,3 +139,5 @@ export WORKON_HOME=~/sync-general/.venvs/
 
 # Setting XDG environment variable
 export XDG_CONFIG_HOME=~/.config/
+
+source ~/sync-general/lib/bash/aliases 
