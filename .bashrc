@@ -92,19 +92,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -121,17 +108,8 @@ export HERBST_LAYOUT_DIR="$HOME/.config/herbstluftwm/layouts"
 # Set editor.
 export EDITOR=emacs
 
-# Load Zan's bash library
-# for file in $(find ~/sync-general/lib/bash/ -type f); do
-#     source $file
-# done
-
-# Zan's defined functions
-
-
-
 # Zan's Path amendments
-export PATH="~/sync-general/bin/bash/:$PATH"
+export PATH="~/zan-bin/:$PATH"
 export PATH="~/.config/herbstluftwm/scripts/:$PATH"
 
 #Zan's venv directory variable
@@ -140,4 +118,5 @@ export WORKON_HOME=~/sync-general/.venvs/
 # Setting XDG environment variable
 export XDG_CONFIG_HOME=~/.config/
 
-source ~/sync-general/lib/bash/aliases 
+source ~/dotfiles/aliases 
+source ~/sync-general/lib/bash/python-venv-management 

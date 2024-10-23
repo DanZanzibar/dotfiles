@@ -1,0 +1,32 @@
+# Zan's defined aliases
+alias cpwd="pwd | xclip -r -selection clipboard && echo 'pwd copied to clipboard'"
+alias pyproject="bash ~/sync-general/scripts/new_python_package.sh"
+alias gits='git status'
+alias ghprivate='gh repo create -s . --private --push'
+alias ghpublic='gh repo create -s . --public --push'
+alias symlink='python3 ~/sync-general/scripts/symlink.py'
+alias quickcommit='git commit -a -m "quickcommit"'
+alias new-venv='bash ~/sync-general/scripts/create_venv.sh'
+alias league-1='activate-venv league && python3 -m league ~/sync-general/dat/league-data/league-1/config.toml'
+alias league-2='activate-venv league && python3 -m league ~/sync-general/dat/league-data/league-2/config.toml'
+alias work-contacts='activate-venv customer_contacts && python3 -m customer_contacts'
+alias snippet='activate-venv pyclipboard && python3 -m pyclipboard'
+alias astudio='cd ~/android-studio/bin && ./studio.sh & exit'
+alias keymap-update='qmk compile -e CONVERT_TO=rp2040_ce && while [ ! -d /media/zan/RPI-RP2 ]; do sleep 1; done && cp ~/qmk/lily58_rev1_DanZanzibar_rp2040_ce.uf2 /media/zan/RPI-RP2/'
+
+
+# Directory aliases
+alias goto-comp2131='cd ~/sync-general/school/comp2131/'
+
+# Aliases for work docs
+alias pricelists-conax-fittings='evince ~/sync-general/work-docs/conax-docs/fittings.pdf & evince ~/sync-general/dat/price-lists/conax-fittings-2024-01-01.pdf & exit'
+alias pricelists-conax-temp-sensors='evince ~/sync-general/work-docs/conax-docs/temp-sensors.pdf & evince ~/sync-general/dat/price-lists/conax-temp-sensor-2024-01-01.pdf & exit'
+alias pricelists-itech='libreoffice --calc ~/sync-general/dat/price-lists/itech-2024-06-21.xlsx & google-chrome --new-window https://www.itechate.com/en/ & exit'
+alias pricelists-magtrol='libreoffice --calc ~/sync-general/dat/price-lists/magtrol-2024-02-20.xlsx & exit'
+alias pricelists-siglent='libreoffice --calc ~/sync-general/dat/price-lists/siglent-2024-08-15.xls & exit'
+
+# Aliases for ssh'ing into computers
+alias desktop='ssh zan@zan-desktop.freeddns.org'
+alias legion='ssh zan@legion'
+alias x1-carbon='ssh zan@x1-carbon'
+alias eframe='TERM=xterm-direct emacsclient -nw'
