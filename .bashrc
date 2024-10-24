@@ -112,10 +112,10 @@ export EDITOR=emacs
 export PATH="~/scripts/:$PATH"
 
 #Zan's venv directory variable
-export WORKON_HOME=~/sync-general/.venvs/
+export WORKON_HOME=~/sync/.venvs/
 
 # Setting XDG environment variable
 export XDG_CONFIG_HOME=~/.config/
 
 source ~/dotfiles/aliases 
-source ~/sync-general/lib/bash/python-venv-management 
+source ~/sync/lib/bash/python-venv-management 
