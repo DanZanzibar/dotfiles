@@ -118,4 +118,4 @@ export WORKON_HOME=~/sync/.venvs/
 export XDG_CONFIG_HOME=~/.config/
 
 source ~/dotfiles/aliases 
-source ~/sync/lib/bash/python-venv-management 
+source ~/sync/scripts/python-venv-management 
