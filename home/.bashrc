@@ -103,6 +103,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export HOSTNAME
 export HERBST_LAYOUT_DIR="$HOME/dotfiles/$HOSTNAME/layouts"
 
 # Set editor.
