@@ -48,9 +48,5 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-if [[ "$HOSTNAME" = 'legion' ]]; then
-    xrandr --setprovideroutputsource modesetting NVIDIA-0
-fi
-
 export HERBST_LAYOUT_DIR="$HOME/.config/herbstluftwm/layouts"
 exec herbstluftwm --locked

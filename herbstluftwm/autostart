@@ -124,13 +124,13 @@ hc keybind $Mod-h spawn "$HOME/scripts/herbstluftwm/layout-load"
 hc keybind $Mod-b spawn "$HOME/scripts/herbstluftwm/layout-delete"
 
 # Zan's System key keybindings
-# if [[ "$HOSTNAME" = 'legion' ]]; then
-#     hc keybind XF86MonBrightnessUp spawn brightnessctl -d intel_backlight set +5%
-#     hc keybind XF86MonBrightnessDown spawn brightnessctl -d intel_backlight set 5%-
-# else
+if [[ "$HOSTNAME" = 'legion' ]]; then
+    hc keybind XF86MonBrightnessUp spawn brightnessctl -d intel_backlight set +5%
+    hc keybind XF86MonBrightnessDown spawn brightnessctl -d intel_backlight set 5%-
+else
     hc keybind XF86MonBrightnessUp spawn brightnessctl set +5%
     hc keybind XF86MonBrightnessDown spawn brightnessctl set 5%-
-# fi
+fi
 hc keybind XF86AudioRaiseVolume spawn pactl set-sink-volume @DEFAULT_SINK@ +5%
 hc keybind XF86AudioLowerVolume spawn pactl set-sink-volume @DEFAULT_SINK@ -5%
 hc keybind XF86AudioMute spawn pactl set-sink-mute @DEFAULT_SINK@ togglefd
