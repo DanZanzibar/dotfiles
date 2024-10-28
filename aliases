@@ -18,12 +18,8 @@ alias keymap-update='qmk compile -e CONVERT_TO=rp2040_ce && while [ ! -d /media/
 # Directory aliases
 alias goto-comp2131='cd ~/sync/school/comp2131/'
 
-# Aliases for work docs
-alias pricelists-conax-fittings='evince ~/sync/work-docs/conax-docs/fittings.pdf & evince ~/sync/dat/price-lists/conax-fittings-2024-01-01.pdf & exit'
-alias pricelists-conax-temp-sensors='evince ~/sync/work-docs/conax-docs/temp-sensors.pdf & evince ~/sync/dat/price-lists/conax-temp-sensor-2024-01-01.pdf & exit'
-alias pricelists-itech='libreoffice --calc ~/sync/dat/price-lists/itech-2024-06-21.xlsx & google-chrome --new-window https://www.itechate.com/en/ & exit'
-alias pricelists-magtrol='libreoffice --calc ~/sync/dat/price-lists/magtrol-2024-02-20.xlsx & exit'
-alias pricelists-siglent='libreoffice --calc ~/sync/dat/price-lists/siglent-2024-08-15.xls & exit'
+# Work stuff.
+alias q360="google-chrome-stable --app='https://q360prod.electro-meters.com/' & exit"
 
 # Aliases for ssh'ing into computers
 alias desktop='ssh zan@zan-desktop.freeddns.org'
