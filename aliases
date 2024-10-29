@@ -12,7 +12,7 @@ alias league-2='activate-venv league && python3 -m league ~/sync/dat/league-data
 alias work-contacts='activate-venv customer_contacts && python3 -m customer_contacts'
 alias snippet='activate-venv pyclipboard && python3 -m pyclipboard'
 alias astudio='cd ~/android-studio/bin && ./studio & exit'
-alias keymap-update='qmk compile -e CONVERT_TO=rp2040_ce && while [ ! -d /media/zan/RPI-RP2 ]; do sleep 1; done && cp ~/qmk/lily58_rev1_DanZanzibar_rp2040_ce.uf2 /media/zan/RPI-RP2/'
+alias keymap-update='qmk compile -e CONVERT_TO=rp2040_ce && while [ ! -d /run/media/zan/RPI-RP2 ]; do sleep 1; done && cp ~/qmk_firmware/lily58_rev1_DanZanzibar_rp2040_ce.uf2 /run/media/zan/RPI-RP2/'
 
 
 # Directory aliases
