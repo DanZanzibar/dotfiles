@@ -104,7 +104,7 @@ if ! shopt -oq posix; then
 fi
 
 export HOSTNAME
-export HERBST_LAYOUT_DIR="$HOME/dotfiles/$HOSTNAME/layouts"
+export HERBST_LAYOUT_DIR="$HOME/dotfiles/layouts"
 
 # Set editor.
 export EDITOR=emacs

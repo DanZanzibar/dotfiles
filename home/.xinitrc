@@ -48,6 +48,5 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-export HERBST_LAYOUT_DIR="$HOME/.config/herbstluftwm/layouts"
 udiskie &
 exec herbstluftwm --locked
