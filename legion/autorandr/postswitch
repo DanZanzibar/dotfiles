@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
 herbstclient detect_monitors
+polybar-start

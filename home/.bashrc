@@ -110,7 +110,7 @@ export HERBST_LAYOUT_DIR="$HOME/dotfiles/layouts"
 export EDITOR=emacs
 
 # Zan's Path amendments
-export PATH="~/scripts/:$PATH"
+export PATH="~/sync/scripts/:$PATH"
 
 #Zan's venv directory variable
 export WORKON_HOME=~/sync/.venvs/
