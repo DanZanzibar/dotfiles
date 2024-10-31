@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Start by sourcing .bashrc so all the environment variables are there.
+source "$HOME/.bashrc"
+
 # this is a simple config for herbstluftwm
 
 hc() {
@@ -212,7 +215,7 @@ autorandr --change
 hc detect_monitors
 
 # Start Zan's other GUI progams
-polybar-start
+polybar-start &> ~/poly.log
 picom -b &
 
 # Background stuff
