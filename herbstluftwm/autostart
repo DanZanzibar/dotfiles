@@ -215,7 +215,7 @@ autorandr --change
 hc detect_monitors
 
 # Start Zan's other GUI progams
-polybar-start &> ~/poly.log
+polybar-start 
 picom -b &
 
 # Background stuff
