@@ -103,6 +103,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Useful functions from Zan.
+source-if-exists() {
+    if [[ -f "$1" ]]; then
+	source "$1"
+    fi
+}
+
 export HOSTNAME
 export HERBST_LAYOUT_DIR="$HOME/sync/dat/layouts"
 
@@ -118,5 +125,6 @@ export WORKON_HOME=~/sync/.venvs/
 # Setting XDG environment variable
 export XDG_CONFIG_HOME=~/.config/
 
-source ~/dotfiles/aliases 
-source ~/sync/scripts/python-venv-functions 
+source-if-exists ~/dotfiles/aliases 
+source-if-exists ~/sync/scripts/python-venv-functions
+source-if-exists ~/qmk_firmware/util/qmk_tab_complete.sh 
