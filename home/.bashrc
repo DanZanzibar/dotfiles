@@ -127,4 +127,5 @@ export XDG_CONFIG_HOME=~/.config/
 
 source-if-exists ~/dotfiles/aliases 
 source-if-exists ~/sync/scripts/python-venv-functions
-source-if-exists ~/qmk_firmware/util/qmk_tab_complete.sh 
+source-if-exists ~/qmk_firmware/util/qmk_tab_complete.sh
+source-if-exists ~/sync/scripts/lib/bash/wifi 
