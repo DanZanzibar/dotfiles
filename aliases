@@ -20,6 +20,7 @@ alias goto-comp2131='cd ~/sync/school/comp2131/'
 
 # Work stuff.
 alias q360="google-chrome-stable --app='https://q360prod.electro-meters.com/' & exit"
+alias chrome-remote="google-chrome-stable --app='https://remotedesktop.google.com/' & exit"
 
 # Aliases for ssh'ing into computers
 alias desktop='ssh zan@zan-desktop.freeddns.org'
