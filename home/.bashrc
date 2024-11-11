@@ -103,8 +103,17 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Useful functions from Zan.
+# Useful functions for sourcing.
 source-if-exists() {
+    if [[ -f "$1" ]]; then
+	source "$1"
+    else
+	echo "$1 cannot be sourced - does not exist."
+    fi
+}
+
+# Doesn't let you know if file does not exist.
+source-if-exists-quietly() {
     if [[ -f "$1" ]]; then
 	source "$1"
     fi
@@ -126,6 +135,6 @@ export WORKON_HOME=~/sync/.venvs/
 export XDG_CONFIG_HOME=~/.config/
 
 source-if-exists ~/dotfiles/aliases 
-source-if-exists ~/sync/scripts/python-venv-functions
-source-if-exists ~/qmk_firmware/util/qmk_tab_complete.sh
+source-if-exists ~/sync/scripts/lib/bash/python-venv
 source-if-exists ~/sync/scripts/lib/bash/wifi 
+source-if-exists-quietly ~/qmk_firmware/util/qmk_tab_complete.sh
