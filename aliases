@@ -1,12 +1,8 @@
 # Zan's defined aliases
-alias cpwd="pwd | xclip -r -selection clipboard && echo 'pwd copied to clipboard'"
-alias pyproject="bash ~/sync/scripts/new_python_package"
 alias gits='git status'
 alias ghprivate='gh repo create -s . --private --push'
 alias ghpublic='gh repo create -s . --public --push'
-alias symlink='python3 ~/sync/scripts/symlink.py'
 alias quickcommit='git commit -a -m "quickcommit"'
-alias new-venv='bash ~/sync/scripts/create_venv'
 alias league-1='activate-venv league && python3 -m league ~/sync/dat/league-data/league-1/config.toml'
 alias league-2='activate-venv league && python3 -m league ~/sync/dat/league-data/league-2/config.toml'
 alias work-contacts='activate-venv customer_contacts && python3 -m customer_contacts'
