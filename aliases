@@ -9,14 +9,12 @@ alias work-contacts='activate-venv customer_contacts && python3 -m customer_cont
 alias snippet='activate-venv pyclipboard && python3 -m pyclipboard'
 alias astudio='cd ~/android-studio/bin && ./studio & exit'
 alias keymap-update='qmk compile -e CONVERT_TO=rp2040_ce && while [ ! -d /run/media/zan/RPI-RP2 ]; do sleep 1; done && cp ~/qmk_firmware/lily58_rev1_DanZanzibar_rp2040_ce.uf2 /run/media/zan/RPI-RP2/'
+alias chrome-remote="google-chrome-stable --app='https://remotedesktop.google.com/' & exit"
 
 
 # Directory aliases
 alias goto-comp2131='cd ~/sync/school/comp2131/'
 
-# Work stuff.
-alias q360="google-chrome-stable --app='https://q360prod.electro-meters.com/' & exit"
-alias chrome-remote="google-chrome-stable --app='https://remotedesktop.google.com/' & exit"
 
 # Aliases for ssh'ing into computers
 alias desktop='ssh zan@zan-desktop.freeddns.org'
