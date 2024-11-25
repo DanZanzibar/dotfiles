@@ -119,6 +119,18 @@ source-if-exists-quietly() {
     fi
 }
 
+# Append "$1" to $PATH when not already in.
+# This function API is accessible to scripts in /etc/profile.d
+append_path () {
+    case ":$PATH:" in
+        *:"$1":*)
+            ;;
+        *)
+            PATH="${PATH:+$PATH:}$1"
+    esac
+}
+
+
 export HOSTNAME
 export HERBST_LAYOUT_DIR="$HOME/sync/dat/layouts"
 
@@ -126,7 +138,9 @@ export HERBST_LAYOUT_DIR="$HOME/sync/dat/layouts"
 export EDITOR=emacs
 
 # Zan's Path amendments
-export PATH="~/sync/scripts/:$PATH"
+append_path "$HOME/sync/scripts/"
+
+export PATH
 
 #Zan's venv directory variable
 export WORKON_HOME=~/sync/.venvs/

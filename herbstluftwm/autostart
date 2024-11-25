@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Start by sourcing .bashrc so all the environment variables are there.
-source "$HOME/.bashrc"
-
 # this is a simple config for herbstluftwm
 
 hc() {
