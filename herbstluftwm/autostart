@@ -122,6 +122,7 @@ hc keybind $Mod-Shift-e spawn emacs --daemon
 hc keybind $Mod-y spawn "$HOME/sync/scripts/herbstluftwm/layout-save"
 hc keybind $Mod-h spawn "$HOME/sync/scripts/herbstluftwm/layout-load"
 hc keybind $Mod-b spawn "$HOME/sync/scripts/herbstluftwm/layout-delete"
+hc keybind $Mod-Shift-s spawn snippet
 
 # Zan's System key keybindings
 if [[ "$HOSTNAME" = 'legion' ]]; then
