@@ -78,8 +78,8 @@ for i in "${!tag_names[@]}" ; do
 done
 
 # cycle through tags
-hc keybind $Mod-period use_index +1 --skip-visible
-hc keybind $Mod-comma  use_index -1 --skip-visible
+# hc keybind $Mod-period use_index +1 --skip-visible
+# hc keybind $Mod-comma  use_index -1 --skip-visible
 
 # layouting
 hc keybind $Mod-r remove
@@ -132,8 +132,14 @@ else
     hc keybind XF86MonBrightnessUp spawn brightnessctl set +5%
     hc keybind XF86MonBrightnessDown spawn brightnessctl set 5%-
 fi
-hc keybind XF86AudioRaiseVolume spawn pactl set-sink-volume @DEFAULT_SINK@ +5%
-hc keybind XF86AudioLowerVolume spawn pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+if [[ "$HOSTNAME" = 'desktop' ]]; then
+    hc keybind XF86TouchpadOff spawn pactl set-sink-volume @DEFAULT_SINK@ +5%
+    hc keybind XF86TouchpadOn spawn pactl set-sink-volume @DEFAULT_SINK@ -5%
+else
+    hc keybind XF86AudioRaiseVolume spawn pactl set-sink-volume @DEFAULT_SINK@ +5%
+    hc keybind XF86AudioLowerVolume spawn pactl set-sink-volume @DEFAULT_SINK@ -5%
+fi
 hc keybind XF86AudioMute spawn pactl set-sink-mute @DEFAULT_SINK@ togglefd
 
 # theme
