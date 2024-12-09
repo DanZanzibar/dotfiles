@@ -119,9 +119,9 @@ hc keybind $Mod-q use_index -1 --skip-visible
 hc keybind $Mod-w use_index +1 --skip-visible
 hc keybind $Mod-e spawn emacsclient -c
 hc keybind $Mod-Shift-e spawn emacs --daemon
-hc keybind $Mod-y spawn "$HOME/sync/scripts/herbstluftwm/layout-save"
-hc keybind $Mod-h spawn "$HOME/sync/scripts/herbstluftwm/layout-load"
-hc keybind $Mod-b spawn "$HOME/sync/scripts/herbstluftwm/layout-delete"
+hc keybind $Mod-y spawn "$SYNC_DIR/scripts/herbstluftwm/layout-save"
+hc keybind $Mod-h spawn "$SYNC_DIR/scripts/herbstluftwm/layout-load"
+hc keybind $Mod-b spawn "$SYNC_DIR/scripts/herbstluftwm/layout-delete"
 hc keybind $Mod-Shift-s spawn snippet
 
 # Zan's System key keybindings

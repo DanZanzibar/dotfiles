@@ -130,15 +130,16 @@ append_path () {
     esac
 }
 
+export SYNC_DIR="$HOME/sync/"
 
 export HOSTNAME
-export HERBST_LAYOUT_DIR="$HOME/sync/dat/layouts"
+export HERBST_LAYOUT_DIR="$SYNC_DIR/dat/layouts"
 
 # Set editor.
 export EDITOR=emacs
 
 # Zan's Path amendments
-append_path "$HOME/sync/scripts/"
+append_path "$SYNC_DIR/scripts/"
 
 export PATH
 
