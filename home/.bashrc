@@ -25,7 +25,7 @@ shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-#shopt -s globstar
+shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -130,15 +130,16 @@ append_path () {
     esac
 }
 
+export SYNC_DIR="$HOME/sync/"
 
 export HOSTNAME
-export HERBST_LAYOUT_DIR="$HOME/sync/dat/layouts"
+export HERBST_LAYOUT_DIR="$SYNC_DIR/dat/layouts"
 
 # Set editor.
 export EDITOR=emacs
 
 # Zan's Path amendments
-append_path "$HOME/sync/scripts/"
+append_path "$SYNC_DIR/scripts/"
 
 export PATH
 
