@@ -153,3 +153,6 @@ source-if-exists ~/dotfiles/aliases
 source-if-exists ~/sync/scripts/lib/bash/python-venv
 source-if-exists ~/sync/scripts/lib/bash/wifi 
 source-if-exists-quietly ~/qmk_firmware/util/qmk_tab_complete.sh
+
+# Created by `pipx` on 2024-12-23 21:58:48
+export PATH="$PATH:/home/zan/.local/bin"
