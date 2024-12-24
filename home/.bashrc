@@ -127,6 +127,7 @@ append_path () {
             ;;
         *)
             PATH="${PATH:+$PATH:}$1"
+	    export PATH
     esac
 }
 
@@ -139,10 +140,8 @@ export HERBST_LAYOUT_DIR="$SYNC_DIR/dat/layouts"
 export EDITOR=emacs
 
 # Zan's Path amendments
-append_path "$SYNC_DIRscripts/"
+append_path "$SYNC_DIR"scripts/
 append_path "$HOME/.local/bin"
-
-export PATH
 
 #Zan's venv directory variable
 export WORKON_HOME=~/sync/.venvs/
