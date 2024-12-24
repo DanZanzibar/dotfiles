@@ -139,7 +139,8 @@ export HERBST_LAYOUT_DIR="$SYNC_DIR/dat/layouts"
 export EDITOR=emacs
 
 # Zan's Path amendments
-append_path "$SYNC_DIR/scripts/"
+append_path "$SYNC_DIRscripts/"
+append_path "$HOME/.local/bin"
 
 export PATH
 
@@ -154,5 +155,3 @@ source-if-exists ~/sync/scripts/lib/bash/python-venv
 source-if-exists ~/sync/scripts/lib/bash/wifi 
 source-if-exists-quietly ~/qmk_firmware/util/qmk_tab_complete.sh
 
-# Created by `pipx` on 2024-12-23 21:58:48
-export PATH="$PATH:/home/zan/.local/bin"
