@@ -122,7 +122,7 @@ hc keybind $Mod-Shift-e spawn emacs --daemon
 hc keybind $Mod-y spawn "$SYNC_DIR/scripts/herbstluftwm/layout-save"
 hc keybind $Mod-h spawn "$SYNC_DIR/scripts/herbstluftwm/layout-load"
 hc keybind $Mod-b spawn "$SYNC_DIR/scripts/herbstluftwm/layout-delete"
-hc keybind $Mod-Shift-s spawn snippet
+hc keybind $Mod-Shift-s spawn pyclipboard
 
 # Zan's System key keybindings
 if [[ "$HOSTNAME" = 'legion' ]]; then
