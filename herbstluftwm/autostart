@@ -122,7 +122,11 @@ hc keybind $Mod-Shift-e spawn emacs --daemon
 hc keybind $Mod-y spawn "$SYNC_DIR/scripts/herbstluftwm/layout-save"
 hc keybind $Mod-h spawn "$SYNC_DIR/scripts/herbstluftwm/layout-load"
 hc keybind $Mod-b spawn "$SYNC_DIR/scripts/herbstluftwm/layout-delete"
+
+# Zan's custom system commands
 hc keybind $Mod-Shift-s spawn pyclipboard
+hc keybind $Mod-Control-e spawn switch-email-signature
+hc keybind Print spawn flameshot gui
 
 # Zan's System key keybindings
 if [[ "$HOSTNAME" = 'legion' ]]; then
@@ -221,6 +225,7 @@ hc detect_monitors
 # Start Zan's other GUI progams
 polybar-start 
 picom -b &
+flameshot &
 
 # Background stuff
 emacs --daemon &
