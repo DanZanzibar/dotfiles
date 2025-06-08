@@ -129,12 +129,12 @@ hc keybind $Mod-Control-e spawn switch-email-signature
 hc keybind Print spawn flameshot gui
 
 # Zan's System key keybindings
-if [[ "$HOSTNAME" = 'legion' ]]; then
+if [[ -e /sys/class/backlight/intel_backlight ]]; then
     hc keybind XF86MonBrightnessUp spawn brightnessctl -d intel_backlight set +5%
     hc keybind XF86MonBrightnessDown spawn brightnessctl -d intel_backlight set 5%-
 else
-    hc keybind XF86MonBrightnessUp spawn brightnessctl set +5%
-    hc keybind XF86MonBrightnessDown spawn brightnessctl set 5%-
+    hc keybind XF86MonBrightnessUp spawn brightnessctl -d nvidia_0 set +5%
+    hc keybind XF86MonBrightnessDown spawn brightnessctl -d nvidia_0 set 5%-
 fi
 
 if [[ "$HOSTNAME" = 'desktop' ]]; then
