@@ -139,6 +139,9 @@ export HERBST_LAYOUT_DIR="$SYNC_DIR/dat/layouts"
 # Set editor.
 export EDITOR=emacs
 
+# Make glob include dotfiles.
+shopt -s dotglob
+
 # Zan's Path amendments
 append_path "$SYNC_DIR"scripts/
 append_path "$HOME/.local/bin"
