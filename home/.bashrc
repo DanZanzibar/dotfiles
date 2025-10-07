@@ -137,7 +137,7 @@ export HOSTNAME
 export HERBST_LAYOUT_DIR="$SYNC_DIR/dat/layouts"
 
 # Set editor.
-export EDITOR=emacs
+export EDITOR=emacsclient
 
 # Make glob include dotfiles.
 shopt -s dotglob
