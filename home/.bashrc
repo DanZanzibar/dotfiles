@@ -139,6 +139,9 @@ export HERBST_LAYOUT_DIR="$SYNC_DIR/dat/layouts"
 # Set editor.
 export EDITOR=emacsclient
 
+# Set Emacs config to full.
+export EMACS_CONFIG_LEVEL=full
+
 # Make glob include dotfiles.
 shopt -s dotglob
 
