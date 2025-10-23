@@ -228,4 +228,4 @@ picom -b &
 flameshot &
 
 # Background stuff
-emacs --daemon &
+EMACS_CONFIG_LEVEL=full emacs --daemon &
